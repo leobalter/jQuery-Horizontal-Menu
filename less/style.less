@@ -1,0 +1,69 @@
+/* Using semantic.gs */
+
+@import 'reset.less';
+@import 'preboot.less';
+@import 'grid.less';
+@import 'menuHorizontal.less';
+
+//////////
+// GRID //
+//////////
+
+@linkColor: #00a;
+@titleColor: #000;
+@borderColor: #ccc;
+
+////////////
+// LAYOUT //
+////////////
+
+li ul {
+    margin-left: 20px;
+}
+
+body {
+    font-family: helvetica, sans-serif;
+}
+
+// header
+#top {
+	margin-bottom: 1em;
+    padding: 0 20px;
+    h1 {
+        font-size: 4em;
+    }
+}
+
+// main column & sidebar
+.maincontent {
+    .column(12);
+}
+
+div {
+    &.air {
+        padding: 12px;
+    }
+    &.line {
+        border:1px solid @borderColor;
+    }
+}
+
+h1 a {
+    color: @titleColor;
+    text-decoration: none;
+}
+
+#bottom {
+    .column(12);
+    margin-top: 12px;
+}
+
+
+@media screen and (max-width: 480px) {
+	#maincolumn,
+	#sidebar {
+		.column(12);
+		margin-bottom: 1em;
+	}
+}
+

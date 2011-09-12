@@ -1,0 +1,35 @@
+@menuLineHeight: 20px;
+
+.menuHorizontal {
+    position: relative;
+    background: @grayDark;
+    .clearfix;
+    ul {
+        position:relative;
+        list-style: none outside;
+        z-index:3;
+        li {
+            list-style: none outside;
+            float:left;
+            margin: 10px;
+            a {
+                display:block;
+                color: @white;
+                text-decoration:none;
+                line-height:@menuLineHeight;
+                padding: 0 6px;
+            }
+        }
+    }
+
+    .menuBar { 
+        position: absolute;
+        z-index:1;
+        background:@blueDark;
+        top: 6px; // based on margin top minus padding top
+        height: @menuLineHeight;
+        padding: 4px 6px;
+        .border-radius(10px);
+    }
+
+}
