@@ -12,6 +12,16 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="js/menu.js"></script>
+    <script>
+        jQuery(function($) {
+            // you can call this way
+            var myMenu = new HorizontalMenu('#myMenu');
+            myMenu.init();
+
+            // or this jQueryfied way
+            $('#myMenu2').horizontalMenu();
+        });
+    </script>
 
 </head>
 <body>
