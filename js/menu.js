@@ -18,7 +18,7 @@ var HorizontalMenu = (function($, window, undefined) {
 
         var move = function(elem) {
             var left, width;
-            left = elem.position().left + 4;
+            left = elem.position().left;
             width = elem.width();
             $menuBar.stop(true).delay(200).animate({
                 left: left,
