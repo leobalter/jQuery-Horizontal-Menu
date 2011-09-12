@@ -1,122 +1,234 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
+    <meta charset='utf-8'>
 
-  <title>leobalter/jQuery-Horizontal-Menu @ GitHub</title>
+    <title>jQuery Horizontal Menu @ GitHub</title>
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #277bde;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #d88421; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #d88421; }
-    h3 { text-align: center; color: #d88421; }
-    a { color: #d88421; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+    <style type="text/css">
+        body {
+            margin-top: 1.0em;
+            background-color: #277bde;
+            font-family: Helvetica, Arial, FreeSans, san-serif;
+            color: #000000;
+        }
+
+        #container {
+            margin: 0 auto;
+            width: 700px;
+        }
+
+        h1 { font-size: 3.8em; color: #d88421; margin-bottom: 3px; }
+
+        h1 .small { font-size: 0.4em; }
+
+        h1 a { text-decoration: none }
+
+        h2 { font-size: 1.5em; color: #d88421; }
+
+        h3 { text-align: center; color: #d88421; }
+
+        a { color: #d88421; }
+
+        .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic; }
+
+        .download { float: right; }
+
+        pre { background: #000; color: #fff; padding: 15px; }
+
+        hr { border: 0; width: 80%; border-bottom: 1px solid #aaa }
+
+        .footer { text-align: center; padding-top: 30px; font-style: italic; }
+
+        .menuHorizontal {
+            position: relative;
+            background: #404040;
+            zoom: 1;
+        }
+
+        .menuHorizontal:before, .menuHorizontal:after {
+            display: table;
+            content: "";
+        }
+
+        .menuHorizontal:after {
+            clear: both;
+        }
+
+        .menuHorizontal ul {
+            position: relative;
+            list-style: none outside;
+            z-index: 3;
+        }
+
+        .menuHorizontal ul li {
+            list-style: none outside;
+            float: left;
+            margin: 10px;
+        }
+
+        .menuHorizontal ul li a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            line-height: 20px;
+            padding: 0 6px;
+        }
+
+        .menuHorizontal .menuBar {
+            position: absolute;
+            z-index: 1;
+            background: #0064cd;
+            top: 6px;
+            height: 20px;
+            padding: 4px 6px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+    </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://raw.github.com/leobalter/jQuery-Horizontal-Menu/master/js/menu.min.js"></script>
+    <script>
+        jQuery(function($) {
+            // you can call this way
+            var myMenu = new HorizontalMenu('#myMenu');
+            myMenu.init();
+
+            // or this jQueryfied way
+            $('#myMenu2').horizontalMenu();
+        });
+    </script>
+
 </head>
 
 <body>
-  <a href="http://github.com/leobalter/jQuery-Horizontal-Menu"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<a href="http://github.com/leobalter/jQuery-Horizontal-Menu"><img
+        style="position: absolute; top: 0; right: 0; border: 0;"
+        src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/></a>
 
-  <div id="container">
+<div id="container">
 
     <div class="download">
-      <a href="http://github.com/leobalter/jQuery-Horizontal-Menu/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/leobalter/jQuery-Horizontal-Menu/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+        <a href="http://github.com/leobalter/jQuery-Horizontal-Menu/zipball/master">
+            <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+        <a href="http://github.com/leobalter/jQuery-Horizontal-Menu/tarball/master">
+            <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
     </div>
 
     <h1><a href="http://github.com/leobalter/jQuery-Horizontal-Menu">jQuery Horizontal Menu</a>
-      <span class="small">by <a href="http://github.com/leobalter">leobalter</a></span></h1>
+        <span class="small">by <a href="http://github.com/leobalter">leobalter</a></span></h1>
 
     <div class="description">
-      Like lavalamp plugin. This create an animated background changing to the item with mouse over
+        Like lavalamp plugin. This create an animated background changing to the item with mouse over
     </div>
 
     <p>EDPJMP === Experimental Design Pattern jQuery Menu Plugin.
 
-I don't have windows, so sry if this won't work in IE (I don't know).</p><h2>Dependencies</h2>
-<p>jQuery</p>
-<h2>Install</h2>
-<p>You can call a html as this:
+        I don't have windows, so sry if this won't work in IE (I don't know).</p>
 
-            <nav id="myMenu" class="menuHorizontal">
-                <ul>
-                    <li class="currentActive">
-                        <a href="#">Menu</a>
-                    </li>
-                    <li>
-                        <a href="#">Leo Balter</a>
-                    </li>
-                    <li>
-                        <a href="#">File</a>
-                    </li>
-                    <li>
-                        <a href="#">Window</a>
-                    </li>
-                    <li>
-                        <a href="#">Version Control</a>
-                    </li>
-                    <li>
-                        <a href="#">Javascript</a>
-                    </li>
-                    <li>
-                        <a href="#">Git</a>
-                    </li>
-                    <li>
-                        <a href="#">FrontEnd</a>
-                    </li>
-                </ul>
+    <h2>Dependencies</h2>
 
-                <div class="menuBar"></div>
-            </nav>
+    <p>jQuery</p>
 
-and then in your Javascript:
+    <h2>Install</h2>
 
-<script>jQuery('#myMenu').horizontalMenu();</script>
+    <p>You can call a html as this:</p>
 
-</p>
-<h2>License</h2>
-<p>WTF PL</p>
-<h2>Authors</h2>
-<p>Leo Balter (leonardo.balter@gmail.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Leo Balter (leonardo.balter@gmail.com)<br/>      </p>
+    <script src="https://gist.github.com/1211853.js"></script>
+
+    <p>What you get is:</p>
+
+    <nav id="myMenu" class="menuHorizontal">
+        <ul>
+            <li class="currentActive">
+                <a href="#">Menu</a>
+            </li>
+            <li>
+                <a href="#">Leo Balter</a>
+            </li>
+            <li>
+                <a href="#">File</a>
+            </li>
+            <li>
+                <a href="#">Window</a>
+            </li>
+            <li>
+                <a href="#">Version Control</a>
+            </li>
+            <li>
+                <a href="#">Javascript</a>
+            </li>
+            <li>
+                <a href="#">Git</a>
+            </li>
+            <li>
+                <a href="#">FrontEnd</a>
+            </li>
+        </ul>
+
+        <div class="menuBar"></div>
+    </nav>
+
+    <nav id="myMenu2" class="menuHorizontal">
+        <ul>
+            <li class="currentActive">
+                <a href="#">You</a>
+            </li>
+            <li>
+                <a href="#">Can Have</a>
+            </li>
+            <li>
+                <a href="#">A lot of</a>
+            </li>
+            <li>
+                <a href="#">Menus</a>
+            </li>
+            <li>
+                <a href="#">yay!</a>
+            </li>
+        </ul>
+
+        <div class="menuBar"></div>
+    </nav>
+
+
+    <h2>License</h2>
+
+    <p>WTF PL</p>
+
+    <h2>Authors</h2>
+
+    <p>Leo Balter (leonardo.balter@gmail.com)
+        <br/>
+        <br/></p>
+
+    <h2>Contact</h2>
+
+    <p>Leo Balter (leonardo.balter@gmail.com)
+        <br/></p>
 
 
     <h2>Download</h2>
+
     <p>
-      You can download this project in either
-      <a href="http://github.com/leobalter/jQuery-Horizontal-Menu/zipball/master">zip</a> or
-      <a href="http://github.com/leobalter/jQuery-Horizontal-Menu/tarball/master">tar</a> formats.
+        You can download this project in either
+        <a href="http://github.com/leobalter/jQuery-Horizontal-Menu/zipball/master">zip</a> or
+        <a href="http://github.com/leobalter/jQuery-Horizontal-Menu/tarball/master">tar</a> formats.
     </p>
+
     <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/leobalter/jQuery-Horizontal-Menu</pre>
+        by running:
+    <pre>$ git clone git://github.com/leobalter/jQuery-Horizontal-Menu</pre>
     </p>
 
     <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/leobalter/jQuery-Horizontal-Menu">leobalter/jQuery-Horizontal-Menu</a>
+        get the source code on GitHub : <a href="http://github.com/leobalter/jQuery-Horizontal-Menu">leobalter/jQuery-Horizontal-Menu</a>
     </div>
 
-  </div>
+</div>
 
-  
+
 </body>
 </html>
